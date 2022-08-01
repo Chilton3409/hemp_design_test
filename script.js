@@ -41,9 +41,22 @@ resetButton.addEventListener("click", () => {
 addListener();
 
 
+//implement a way to randomly change the background color of a given element
+
+            
+function random(number) {
+    return Math.floor(Math.random() * number + 1);
+}
+function bgChange() {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    return rndCol
+}
+
 
 
 //buttons
+
+//wrapper buttons
 hide_all = document.querySelector('.hide_all');
 show_all_buttons = document.querySelector('.show_all_buttons');
 wrapper_block = document.querySelector('.wrapper_block');
@@ -55,6 +68,14 @@ wrapper_inline_flex = document.querySelector('.wrapper_inline_flex');
 wrapper_contents = document.querySelector('.wrapper_contents');
 wrapper_grid = document.querySelector(".wrapper_grid");
 
+//change wrapper's background to a random color
+wrapper_random_color = document.querySelector(".wrapper_random_color");
+wrapper_random_color.addEventListener("click", () => {
+    wrapper.style.backgroundColor = bgChange();
+});
+
+
+//end wrapper buttons
 //records buttons
 records_block = document.querySelector('.records_block');
 records_flex = document.querySelector('.records_flex');
@@ -63,6 +84,8 @@ records_inline_block = document.querySelector('.records_inline_block');
 records_inline_flex = document.querySelector('.records_inline_flex');
 records_grid = document.querySelector('.records_grid');
 records_contents = document.querySelector('.records_contents');
+records_random_color = document.querySelector('.records_random_color');
+
 
 //end reecords buttons
 
@@ -73,6 +96,8 @@ sections_inline_block = document.querySelector('.sections_inline_block');
 sections_inline_flex = document.querySelector('.sections_inline_flex');
 sections_reset = document.querySelector('.sections_reset');
 sections_content = document.querySelector('.sections_content');
+sections_random_color = document.querySelector('.sections_random_color');
+
 
 
 
@@ -85,6 +110,8 @@ header_inline_block = document.querySelector('.header_inline_block');
 header_inline_flex = document.querySelector('.header_inline_flex');
 header_contents = document.querySelector('.header_contents');
 header_grid = document.querySelector('.header_grid');
+header_random_color = document.querySelector('.header_random_color');
+
 
 
 
@@ -166,6 +193,10 @@ records_contents.addEventListener("click", () => {
     records.style.display = 'contents';    
 });
 
+records_random_color.addEventListener("click", () => {
+    records.style.backgroundColor = bgChange();
+
+});
 
 
 //sections
@@ -193,7 +224,9 @@ sections_content.addEventListener("click", () => {
     sections.forEach(element => element.style.display = 'contents');
 });
 
-
+sections_random_color.addEventListener("click", () => {
+    sections.forEach(element => element.style.backgroundColor = bgChange());
+});
 ///end sections
 
 
@@ -236,6 +269,10 @@ header_contents.addEventListener("click", () => {
 
 header_grid.addEventListener("click", () => { 
     header.style.display = 'grid';
+});
+
+header_random_color.addEventListener("click", () => {
+    header.style.backgroundColor = bgChange();
 });
 
 

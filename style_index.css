@@ -8,7 +8,7 @@
     font-family: serif;
     flex: auto;
     box-shadow: 1 1 8px #f1f1f1 inset;
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(1, 2fr);
     gap: 15px;
     grid-auto-rows: minmax(auto-fill,minmax(200px, 4fr));
@@ -76,9 +76,8 @@ button:hover {
   }
   
   header {
-    display: flex;
-    float: left;
-    background: rgb(147, 36, 237);
+  
+ 
     background-repeat: no-repeat;
     height: auto;
     /*
@@ -87,6 +86,12 @@ button:hover {
     background-position: center;
     background-repeat: no-repeat;
     */
+    display: flex; 
+    float: left; 
+    color: black;
+     margin: 20px; 
+     
+     background-color: rgb(77, 145, 131);
   }
   h1 {
     text-align: center;
