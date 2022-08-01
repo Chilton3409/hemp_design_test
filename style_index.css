@@ -1,0 +1,306 @@
+#wrapper {
+    width: auto;
+    margin-left: auto;
+    margin-left: auto;
+    touch-action: manipulation;
+    box-shadow: 3px 3px 3px #666666;
+    border: 5px solid black;
+    font-family: serif;
+    flex: auto;
+    box-shadow: 1 1 8px #f1f1f1 inset;
+    display: flex;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 15px;
+    grid-auto-rows: minmax(auto-fill,minmax(200px, 4fr));
+    
+    padding: 5px;
+  }
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  flex: auto;
+  display: inline-block;
+  border: none;
+}
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+  body {
+    background-color: antiquewhite;
+    color: #221811;
+    font-family: inherit;
+    width:100%;
+    display: block;
+  }
+
+  header h1 {
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+
+  nav {
+    display: inline-flex;
+    font-weight: bold;
+    font-size: 2.0em;
+    font-family: cursive;
+    flex: auto;
+    padding: 5px;
+   
+  }
+  nav a:visited {
+    color: #468f29;
+  }
+  nav a:hover {
+    color: #dfb808;
+  }
+  
+  nav a {
+    text-decoration: none;
+    display: inline-flex;
+    position: relative;
+    /*
+    background-image: url(images/railroad_thumbnail.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    */
+  }
+  nav ul,
+  nav ul li {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  header {
+    display: flex;
+    float: left;
+    background: rgb(147, 36, 237);
+    background-repeat: no-repeat;
+    height: auto;
+    /*
+    background-image: url(images/hemp-crystals-close-w-logo.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    */
+  }
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: auto;
+    margin: auto;
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }  
+  aside {
+
+    flex: auto;
+    font-family: cursive;
+   
+    margin: auto;
+
+
+   
+ 
+    
+   
+   
+   
+  }
+
+
+ 
+  .news {
+    display: flex;
+    flex: auto;
+   
+    border-bottom: 1px solid #000000;
+   
+  
+    color: #111110eb;
+  }
+  main {
+    border: 5px solid black;
+    display: flex;
+    flex: auto;
+   
+  }
+  .records {
+    color: black;
+    flex: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    display: grid;
+
+  }
+  article {
+ 
+    background-image: linear-gradient(
+      105deg,
+      rgba(16, 226, 233, 0.897) 39%,
+      rgba(165, 19, 233, 0.759) 96%
+    );
+    color: black;
+   
+    box-shadow: 10px 10px 18px 18px #507c6ab5 inset;
+    flex: auto;
+  }
+  article section p:hover {
+    background-image: linear-gradient(
+      105deg,
+      rgb(16, 233, 110) 39%,
+      rgb(238, 145, 32) 96%
+    );
+    box-shadow:inset;
+  }
+  article section em:hover {
+    background-image: linear-gradient(
+      105deg,
+      rgb(16, 233, 110) 39%,
+      rgb(238, 145, 32) 96%
+    );
+  }
+ 
+  article h2:hover {
+    background-image: linear-gradient(
+      105deg,
+      rgb(16, 233, 110) 39%,
+      rgba(238, 145, 32, 0.696) 96%
+    );
+  }
+  article:nth-of-type(2) {
+    flex: 1 100px;
+  }
+  section {
+    display: inline-flex;
+    font-family: sans-serif;
+    font-size: 1em;
+    flex: auto;
+  }
+  .about-us {
+
+  
+    
+   flex: auto;
+
+  }
+  .dedication {
+   
+    flex: auto;
+
+
+  }
+  .lotion {
+    flex: auto;
+  
+  }
+  .tincture {
+   flex: auto;
+
+  }
+  .hemp {
+   
+    flex: auto;
+    
+    
+  }
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    flex: auto;
+    display: inline-block;
+    border: none;
+    
+  }
+
+  
+  .dropdown {
+    position: relative;
+  
+    align-items: center;
+    background-color: #25dc99;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position:relative;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(15, 180, 245, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+   
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;
+    position: absolute;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  /*
+  article section:nth-of-type(3) {
+    
+    background-image: url(images/hemp-crystals-close-w-logo.jpg);
+    background-size: 70%;
+    background-position: left;
+    background-repeat: no-repeat;
+   
+  }
+   */
+   .videoBox {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 380px;
+    border-radius: 10px;
+    background-color: #eee;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+}
+
+.hidden {
+    left: -50%;
+}
+
+.showing {
+    left: 50%;
+    display: none;
+}
+
+#videoBox video {
+    display: block;
+    width: 400px;
+    margin: 40px auto;
+    object-position: left;
+
+
+}
+#videoBox video:download {
+  display: none;
+}
