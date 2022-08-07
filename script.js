@@ -5,6 +5,7 @@ sections = document.querySelectorAll('section');
 header = document.querySelector('header');
 hide = document.querySelectorAll('.dropdown');
 aside = document.querySelector('aside');
+body = document.querySelector('body');
 
 //new idea, I want to let the user know which button is currently toggled on
 //And change the button to be clickeds text content to the text content of the active button
@@ -45,14 +46,12 @@ addListener();
 
             
 function random(number) {
-    return Math.floor(Math.random() * number + 1);
+    return Math.floor(Math.random() * number + 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 );
 }
 function bgChange() {
-    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    const rndCol = `RGB(${random(255)}, ${random(255)}, ${random(255)}, ${random(100)})`;
     return rndCol
 }
-
-
 
 //buttons
 
@@ -98,9 +97,6 @@ sections_reset = document.querySelector('.sections_reset');
 sections_content = document.querySelector('.sections_content');
 sections_random_color = document.querySelector('.sections_random_color');
 
-
-
-
 //end sections buttons
 
 //header buttons
@@ -113,13 +109,11 @@ header_grid = document.querySelector('.header_grid');
 header_random_color = document.querySelector('.header_random_color');
 
 
-
-
-
-
-
-
-
+//body buttons
+body_random_color = document.querySelector('.body_random_color');
+body_flex = document.querySelector('.body_flex');
+body_inline_block = document.querySelector('.body_inline_block');
+body_inline_flex = document.querySelector('.body_inline_flex');
 
 
 
@@ -133,31 +127,43 @@ wrapper_block.addEventListener("click", () => {
 
 wrapper_reset.addEventListener("click", () => {
     wrapper.style.display = 'grid';
+    buttonToBeClicked.textContent = `you changed ${wrapper_reset.textContent}`;
+    addListener();
 });
 
 
 wrapper_flex.addEventListener("click", () => {
     wrapper.style.display = 'flex';
+    buttonToBeClicked.textContent = `you changed ${wrapper_flex.textContent}`;
+    addListener();
 
 });
 
 wrapper_inline_block.addEventListener("click", () => {
     wrapper.style.display = 'inline-block';
+    buttonToBeClicked.textContent = `you changed ${wrapper_inline_block.textContent}`;
+    addListener();
 
 });
 
 wrapper_inline_flex.addEventListener("click", () => {
     wrapper.style.display = 'inline-flex';
+    buttonToBeClicked.textContent = `you changed ${wrapper_inline_flex.textContent}`;
+    addListener();
 
 });
 
 wrapper_contents.addEventListener("click", () => {
     wrapper.style.display = 'contents';
+    buttonToBeClicked.textContent = `you changed ${wrapper_contents.textContent}`;
+    addListener();
 
 });
 
 wrapper_grid.addEventListener("click", () => {
     wrapper.style.display = 'grid';
+    buttonToBeClicked.textContent = `you changed ${wrapper_grid.textContent}`;
+    addListener();
 
 });
 
@@ -167,34 +173,51 @@ wrapper_grid.addEventListener("click", () => {
 //begin records controls, use records with records_* (button control)
 records_block.addEventListener("click", () => {
     records.style.display = 'block';
+    buttonToBeClicked.textContent = `you changed ${records_block.textContent}`;
+    addListener();
 });
 
 records_flex.addEventListener("click", () => {
     records.style.display = 'flex';
+    buttonToBeClicked.textContent = `you changed ${records_flex.textContent}`;
+    addListener();
 });
 
 records_reset.addEventListener("click", () => {
     records.style.display = 'grid';
+    buttonToBeClicked.textContent = `you changed ${records_reset.textContent}`;
+    addListener();
 });
 
 records_inline_block.addEventListener("click", () => {
     records.style.display = 'inline-block';
+    buttonToBeClicked.textContent = `you changed ${records_inline_block.textContent}`;
+    addListener();
 });
 
 records_inline_flex.addEventListener("click", () => {
     records.style.display = 'inline-flex';
+    buttonToBeClicked.textContent = `you changed ${records_inline_flex.textContent}`;
+    addListener();
 });
 
 records_grid.addEventListener("click", () => {
     records.style.display = 'grid';
+    buttonToBeClicked.textContent = `you changed ${records_grid.textContent}`;
+    addListener();
 });
 
 records_contents.addEventListener("click", () => {
     records.style.display = 'contents';    
+    buttonToBeClicked.textContent = `you changed ${records_contents.textContent}`;
+    addListener();
 });
 
 records_random_color.addEventListener("click", () => {
     records.style.backgroundColor = bgChange();
+    buttonToBeClicked.textContent = `active button is ${records_random_color.textContent}`;
+    addListener();
+
 
 });
 
@@ -203,29 +226,45 @@ records_random_color.addEventListener("click", () => {
 
 sections_block.addEventListener("click", () => {
     sections.forEach(element => element.style.display = 'block');
+    buttonToBeClicked.textContent = `active button is ${sections_block.textContent}`;
+    addListener();
+
 });
 
 sections_flex.addEventListener("click", () => {
     sections.forEach(element => element.style.display = 'flex');
+    buttonToBeClicked.textContent = `active button is ${sections_flex.textContent}`;
+    addListener();
 });
 
 sections_inline_block.addEventListener("click", () => {
     sections.forEach(element => element.style.display = 'inline_block');
+    buttonToBeClicked.textContent = `active button is ${sections_inline_block.textContent}`;
+    addListener();
+
 
 });
 
 sections_inline_flex.addEventListener("click", () => {
     sections.forEach(element => element.style.display = 'inline-flex');
+    buttonToBeClicked.textContent = `active button is ${sections_inline_flex.textContent}`;
+    addListener();
 });
 sections_reset.addEventListener("click", () => {
     sections.forEach(element => element.style.display = 'inline-flex');
+    buttonToBeClicked.textContent = `active button is ${sections_inline_flex.textContent}`;
+    addListener();
 });
 sections_content.addEventListener("click", () => {
     sections.forEach(element => element.style.display = 'contents');
+    buttonToBeClicked.textContent = `active button is ${sections_content.textContent}`;
+    addListener();
 });
 
 sections_random_color.addEventListener("click", () => {
     sections.forEach(element => element.style.backgroundColor = bgChange());
+    buttonToBeClicked.textContent = `active button is ${sections_random_color.textContent}`;
+    addListener();
 });
 ///end sections
 
@@ -254,25 +293,37 @@ const header_flex_styles = `
 `
 header_flex.addEventListener("click", () => {
     header.style.cssText = header_flex_styles;
+    buttonToBeClicked.textContent = `active button is ${header_flex.textContent}`;
+    addListener();
 });
 
 header_inline_block.addEventListener("click", () => {
     header.style.display = 'inline-block';
+    buttonToBeClicked.textContent = `active button is ${header_inline_block.textContent}`;
+    addListener();
 });
 header_inline_flex.addEventListener("click", () => {
     header.style.display = ' inline-flex';
+    buttonToBeClicked.textContent = `active button is ${header_inline_flex.textContent}`;
+    addListener();
 });
 
 header_contents.addEventListener("click", () => {
     header.style.display = 'contents';
+    buttonToBeClicked.textContent = `active button is ${header_contents.textContent}`;
+    addListener();
 });
 
 header_grid.addEventListener("click", () => { 
     header.style.display = 'grid';
+    buttonToBeClicked.textContent = `active button is ${header_grid.textContent}`;
+    addListener();
 });
 
 header_random_color.addEventListener("click", () => {
     header.style.backgroundColor = bgChange();
+    buttonToBeClicked.textContent = `active button is ${header_random_color.textContent}`;
+    addListener();
 });
 
 
@@ -293,4 +344,20 @@ show_all_buttons.addEventListener("click", () => {
 
     hide.forEach(element => element.style.display = 'inline-block');
 
+});
+
+//body controls
+
+body_random_color.addEventListener("click", () => {
+    body.style.backgroundColor = bgChange();
+});
+
+body_flex.addEventListener("click", () => {
+    body.style.display = 'flex';
+});
+body_inline_block.addEventListener("click", () => {
+    body.style.display = 'inline-block';
+});
+body_inline_flex.addEventListener("click", () => {
+    body.style.display = 'inline-flex';
 });

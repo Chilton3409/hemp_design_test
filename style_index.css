@@ -12,6 +12,7 @@
     grid-template-columns: repeat(1, 2fr);
     gap: 15px;
     grid-auto-rows: minmax(auto-fill,minmax(200px, 4fr));
+    background-color: rgb(240, 208, 130);
     
     padding: 5px;
   }
@@ -30,11 +31,12 @@ button:hover {
 }
 
   body {
-    background-color: antiquewhite;
-    color: #221811;
+    background-color: rgb(67, 131, 131);
+ 
     font-family: inherit;
     width:100%;
     display: block;
+    flex: auto;
   }
 
   header h1 {
